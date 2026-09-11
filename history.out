@@ -1,0 +1,50 @@
+   
+   65  ls 
+   66  ls /etc
+   67  cat /etc/group
+   68  sudo groupadd students
+   69  sudo useradd -u 1234 -m user1
+   70  sudo usermod -G students
+   71  sudo usermod -aG students
+   72  sudo usermod -aG students user1
+   73  sudo passwd user1
+   74  sudo chage -M 90 user1
+   75  sudo chage -l user1
+   76  id user1
+   77  sudo find / -perm -4000 -type f 2>/dev/null > ~/setuid_file.out
+   78  cat ~/setuid_file.out
+   79  ps -eo, pid,ruid,euid,comm | awk '$2!=0 && $3==0' > ~/view_processes.out
+   80  ps -eo pid,ruid,euid,comm | awk '$2!=0 && $3==0' > ~/view_processes.out
+   81  ls
+   82  cat view_processes.out
+   83  ps -eo pid,ruid,euid,comm | awk '$2!=0 && $3==0' > ~/view_processes.out
+   84  cat view_processes.out
+   85  ls /usr/bin/
+   86  ls -a /usr/bin/
+   87  cp /usr/bin/cat ~/newcat
+   88  ls
+   89  sudo chown root:root /newcat
+   90  sudo chown root:root ~/newcat
+   91  sudo chmod 4755 ~/newcat
+   92  ls -l ~/mycat
+   93  ls -l ~/newcat
+   94  ~/newcat /etc/shadow
+   95  cp /usr/bin/chown ~/newchown
+   96  ls
+   97  getcap ~/newchown
+   98  sudo setcap cap_chown=+ep ~/newchown
+   99  getcap ~/newchown
+  100  touch ~/newtestfile
+  101  ls -l ~/newtestfile 
+  102  ~/mychown user1 ~/newtestfile 
+  103  ~/newchown user1 ~/newtestfile 
+  104  ls -l ~/newtestfile 
+  105  sudo visudo
+  106  sudo nano visudo
+  107  sudo visudo
+  108  jobs
+  109  sudo visudo
+  110  jobs
+  111  fg
+  112  history > ~/history.out
+
